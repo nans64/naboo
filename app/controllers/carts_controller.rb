@@ -1,6 +1,7 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
-  before_action :add_product_to_cart, only: [:update]
+  after_action :add_product_to_cart, only: [:create, :update]
+  
   respond_to :html, :js
 
   # GET /carts

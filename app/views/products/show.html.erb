@@ -123,9 +123,16 @@
                   <div class="col-sm-6 text-sm-right">
                     <!-- Add to cart -->
                     <button type="button" class="btn btn-primary btn-icon">
-                      <%= link_to '<i class="fas fa-shopping-bag"></i>'.html_safe, cart_path(current_user.cart.id), remote: true, style: 'color: red;'  %></td>
+                      <% if user_signed_in? %>
+                        <% if current_user.cart = nil %>
+                          <%= link_to 'Add to bag', new_cart_path, remote: true, :method => "put", class: "btn-inner--text" %>
+                        <% else %>
+                          <%= link_to 'Add to bag', cart_path(@cart.id), remote: true, :method => "put", class: "btn-inner--text" %>
+                        <% end %>
+                      <% else %>
+                        <%= link_to "Please log in to purchase", new_user_session_path, class: "btn-inner--text" %>
+                      <% end %>
                       <span class="btn-inner--icon"><i class="fas fa-shopping-bag"></i></span>
-                      <span class="btn-inner--text">Add to bag</span>
                     </button>
                   </div>
                 </div>
