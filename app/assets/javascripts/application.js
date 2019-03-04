@@ -17,3 +17,6 @@
 //= require jquery3
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require bootstrap.min.js
+//= require demo.js
+//= require purpose.js
