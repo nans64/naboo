@@ -8,7 +8,7 @@
 
 #  Source pour les descriptions : https://jardinage.lemonde.fr/dossiers-cat3-12-races-chats.html
 
-Products.destroy_all
+Product.destroy_all
 
 images = [
   "https://jardinage.lemonde.fr/images/dossiers/2019-02/ural-rex-111519.jpg",
@@ -80,5 +80,5 @@ descriptions = [
 ]
 
 20.times do |i|
-  Products.create!(title: titles[i], description: title[i]+descriptions[i], price: rand(0..99)+0.99, image_url: images[i])
+  Product.create!(title: titles[i], description: title[i]+descriptions[i], price: rand(0..99)+0.99, image_url: images[i])
 end
