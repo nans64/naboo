@@ -21,13 +21,21 @@ images = [
 ]
 
 titles = [
-  "Tiger",
-  "Max",
-  "Smokey",
-  "Sam",
-  "Kitty",
-  "Sassy",
-  "Shadow"
+  "Uralrex",
+  "Mau",
+  "Californirex",
+  "Serge",
+  "Misty",
+  "Cocktail des Bouriles",
+  "Seychellous",
+  "Safari",
+  "Skookum",
+  "Miskin",
+  "Mandarine",
+  "York-Choco",
+  ""
+
+
 ]
 
 descriptions = [
@@ -38,6 +46,14 @@ descriptions = [
   " possède un corps de forme rectangulaire, une ossature solide, une queue de longueur moyenne et des pieds ovales. On le reconnaît entre autres grâce à sa robe claire au poil court recouverte de taches rondes (robe dite 'spotted').",
   " possède un corps compact et puissant et un dos arqué. Son ossature est forte, ainsi que sa musculature. Ce chat est également reconnaissable grâce à sa large tête en forme de trapèze, à ses pommettes saillantes et à ses grands yeux ronds. Ses oreilles de taille moyenne sont espacées l’une de l’autre.",
   " est un chat de taille moyenne qui a une musculature délicate et une ossature fine. Sa tête est de forme triangulaire et il possède des yeux bleus brillants en amande placés légèrement à l’oblique, ainsi que des grandes et larges oreilles."
+  " a tout du félin et notamment une belle robe à poil court doux et brillant qui fait penser à celle d’un léopard, c’est-à-dire mouchetée de taches noires pleines, de type 'spotted tabby'.",
+  " est un chat de très petite taille au corps musclé et aux pattes très courtes. Ses pattes de derrière ont aussi la particularité d’être un peu plus longues que celles de devant. En plus de ses pattes courtes et de sa petite taille, ce chat possède une robe reconnaissable et originale puisque ses poils sont courts et frisés sur tout son corps, jusqu’à sa queue. Ils forment des sortes d’ondulations à l’intensité variable sur son corps et donnent une impression de légèreté à sa robe.",
+  " est dépourvu de poils, même si quelquefois il arbore un léger duvet satiné ayant l’aspect du cachemire. Sa peau forme comme des plis.",
+  " est un chat très élégant et svelte, caractéristiques qu’il tient du Siamois et de l’Oriental dont il descend. Ses pattes sont longues et musclées avec une ossature fine. Il possède une robe mi-longue caractérisée par des poils plus courts sur ses épaules qui s’allongent ensuite sur ses flancs, et surtout sa queue est en panache. Son poil, particulièrement soyeux, est couché sur son corps.",
+  " est musclé mais tout en élégance. Ses yeux, de forme ovale, sont d’une couleur or ou verte intense et il possède deux oreilles aussi hautes que larges à leur base, bien dressées sur sa petite tête ronde.",
+
+
+
 ]
 
 7.times do |i|
