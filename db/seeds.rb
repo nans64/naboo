@@ -28,7 +28,7 @@ images = [
   "https://jardinage.lemonde.fr/images/dossiers/2018-10/anatoli-1-094710.jpg",
   "https://jardinage.lemonde.fr/images/dossiers/2018-10/colorpoint-shorthair-065619.jpg",
   "https://jardinage.lemonde.fr/images/dossiers/2018-10/ashera-1-153825.jpg",
-  "https://jardinage.lemonde.fr/images/dossiers/2018-09/highland-fold-1-120133.jpg"
+  "https://jardinage.lemonde.fr/images/dossiers/2018-09/highland-fold-1-120133.jpg",
   "https://jardinage.lemonde.fr/images/dossiers/2018-09/donskoy1-151329.jpg",
   "https://jardinage.lemonde.fr/images/dossiers/2018-09/havana-brown-1-134550.jpg"
 ]
