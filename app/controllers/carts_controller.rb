@@ -1,5 +1,7 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
+  before_action :add_product_to_cart, only: [:update]
+  respond_to :html, :js
 
   # GET /carts
   # GET /carts.json
@@ -24,7 +26,7 @@ class CartsController < ApplicationController
   # POST /carts
   # POST /carts.json
   def create
-    @cart = Cart.new(cart_params)
+    @cart = Cart.new(user: current_user)
 
     respond_to do |format|
       if @cart.save
@@ -42,7 +44,7 @@ class CartsController < ApplicationController
   def update
     respond_to do |format|
       if @cart.update(cart_params)
-        format.html { redirect_to @cart, notice: 'Cart was successfully updated.' }
+        format.html { redirect_to @cart, notice: 'Product was added to cart.' }
         format.json { render :show, status: :ok, location: @cart }
       else
         format.html { render :edit }
@@ -61,14 +63,15 @@ class CartsController < ApplicationController
     end
   end
 
+  def add_product_to_cart
+    @product = Product.find(params[:product_id])
+    Cart_product.create!(cart: @cart, product: @product)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
       @cart = Cart.find(params[:id])
     end
-
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def cart_params
-      params.require(:cart).permit(:user_id)
-    end
+    
 end
