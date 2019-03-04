@@ -5,6 +5,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    if current_user.cart = nil then cart.create!(user: current_user) end
   end
 
   # GET /products/1

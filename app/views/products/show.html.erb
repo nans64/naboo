@@ -123,6 +123,7 @@
                   <div class="col-sm-6 text-sm-right">
                     <!-- Add to cart -->
                     <button type="button" class="btn btn-primary btn-icon">
+                      <%= link_to '<i class="fas fa-shopping-bag"></i>'.html_safe, cart_path(current_user.cart.id), remote: true, style: 'color: red;'  %></td>
                       <span class="btn-inner--icon"><i class="fas fa-shopping-bag"></i></span>
                       <span class="btn-inner--text">Add to bag</span>
                     </button>
