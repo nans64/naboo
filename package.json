@@ -1,0 +1,7 @@
+{
+  "name": "miaou_shop",
+  "private": true,
+  "dependencies": {
+    "file-loader": "^3.0.1"
+  }
+}
