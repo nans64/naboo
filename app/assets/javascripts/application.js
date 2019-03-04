@@ -159,10 +159,8 @@
 //= require swiper/dist/js/swiper.esm.js
 //= require swiper/dist/js/swiper.esm.bundle.js
 //= require swiper/dist/js/swiper.min.js
-//= require list.js
 //= require list.js/dist/list.min.js
 //= require bootstrap-notify/bootstrap-notify.min.js
-//= require highlight.js
 //= require highlight.js/lib/languages/ruleslanguage.js
 //= require highlight.js/lib/languages/lasso.js
 //= require highlight.js/lib/languages/nsis.js
@@ -381,7 +379,6 @@
 //= require apexcharts/dist/apexcharts.common.js
 //= require apexcharts/dist/apexcharts.esm.js
 //= require apexcharts/dist/apexcharts.min.js
-//= require typed.js
 //= require typed.js/app.js
 //= require typed.js/assets/demos.js
 //= require typed.js/lib/typed.min.js
