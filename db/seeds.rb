@@ -80,5 +80,5 @@ descriptions = [
 ]
 
 20.times do |i|
-  Product.create!(title: titles[i], description: title[i]+descriptions[i], price: rand(0..99)+0.99, image_url: images[i])
+  Product.create!(title: titles[i], description: titles[i]+descriptions[i], price: rand(0..99)+0.99, image_url: images[i])
 end
