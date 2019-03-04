@@ -1,7 +1,6 @@
 class CartsController < ApplicationController
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
   after_action :add_product_to_cart, only: [:create, :update]
-  
   respond_to :html, :js
 
   # GET /carts
@@ -30,28 +29,19 @@ class CartsController < ApplicationController
     @cart = Cart.new(user: current_user)
 
     respond_to do |format|
-      if @cart.save
-        format.html { redirect_to @cart, notice: 'Cart was successfully created.' }
-        format.json { render :show, status: :created, location: @cart }
-      else
-        format.html { render :new }
-        format.json { render json: @cart.errors, status: :unprocessable_entity }
-      end
+      @cart.save
+      format.html { redirect_to product_path(params[:product_id]), flash[:success] = "Product added to cart" }
     end
   end
 
   # PATCH/PUT /carts/1
   # PATCH/PUT /carts/1.json
+
+# LES NOTICE / FLASH NE MARCHENT PAS. A ADAPTER A AJAX
+
   def update
-    respond_to do |format|
-      if @cart.update(cart_params)
-        format.html { redirect_to @cart, notice: 'Product was added to cart.' }
-        format.json { render :show, status: :ok, location: @cart }
-      else
-        format.html { render :edit }
-        format.json { render json: @cart.errors, status: :unprocessable_entity }
-      end
-    end
+    flash[:success] = "Product added to cart"
+    redirect_to product_path(params[:product_id])
   end
 
   # DELETE /carts/1
@@ -66,13 +56,13 @@ class CartsController < ApplicationController
 
   def add_product_to_cart
     @product = Product.find(params[:product_id])
-    Cart_product.create!(cart: @cart, product: @product)
+    CartProduct.create!(cart: @cart, product: @product)
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cart
-      @cart = Cart.find(params[:id])
+      @cart = Cart.find_by(user: current_user)
     end
     
 end
