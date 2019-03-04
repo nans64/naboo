@@ -8,7 +8,7 @@
 
 #  Source pour les descriptions : https://jardinage.lemonde.fr/dossiers-cat3-12-races-chats.html
 
-Products.destroy_all
+Product.destroy_all
 
 images = [
   "https://jardinage.lemonde.fr/images/dossiers/2019-02/ural-rex-111519.jpg",
@@ -28,7 +28,7 @@ images = [
   "https://jardinage.lemonde.fr/images/dossiers/2018-10/anatoli-1-094710.jpg",
   "https://jardinage.lemonde.fr/images/dossiers/2018-10/colorpoint-shorthair-065619.jpg",
   "https://jardinage.lemonde.fr/images/dossiers/2018-10/ashera-1-153825.jpg",
-  "https://jardinage.lemonde.fr/images/dossiers/2018-09/highland-fold-1-120133.jpg"
+  "https://jardinage.lemonde.fr/images/dossiers/2018-09/highland-fold-1-120133.jpg",
   "https://jardinage.lemonde.fr/images/dossiers/2018-09/donskoy1-151329.jpg",
   "https://jardinage.lemonde.fr/images/dossiers/2018-09/havana-brown-1-134550.jpg"
 ]
@@ -58,12 +58,12 @@ titles = [
 
 descriptions = [
   " est de taille moyenne et son corps musclé est harmonieux. Ses pattes, qui se terminent par des pieds de forme ovale, sont minces et bien proportionnées. Ce chat possède de grands yeux ovales, assez espacés l’un de l’autre et un peu inclinés, dont la couleur varie avec celle de sa robe. Les pommettes de ses joues sont légèrement saillantes et il porte ses oreilles de taille moyenne bien droites sur sa tête",
-  " fait partie des chats de type 'médioligne semi-foreign', c’est-à-dire qu’il possède un corps de forme rectangulaire, une ossature solide, une queue de longueur moyenne et des pieds ovales. C’est un chat élégant à la forte musculature, haut sur pattes."
+  " fait partie des chats de type 'médioligne semi-foreign', c’est-à-dire qu’il possède un corps de forme rectangulaire, une ossature solide, une queue de longueur moyenne et des pieds ovales. C’est un chat élégant à la forte musculature, haut sur pattes.",
   " a une démarche particulière comme s’il se tenait sur des pointes, à l’image d’une danseuse. Ses yeux sont espacés entre eux et situés légèrement en biais. Ses grandes oreilles en forme de cônes sont placées haut sur sa tête. Il possède une longue queue à l’apparence d’un fouet, recouverte d’un poil cranté, comme le reste de sa robe.",
   " possède des pattes hautes et solides qui se terminent par des pieds ronds. Son corps est musclé. Sa tête, de forme triangulaire, est petite par rapport à son corps. Le nez du Serengeti est assez large et son museau fin. Ses yeux brillants, de couleur or à cuivre, sont ronds, grands et écartés l’un de l’autre.",
   " possède un corps de forme rectangulaire, une ossature solide, une queue de longueur moyenne et des pieds ovales. On le reconnaît entre autres grâce à sa robe claire au poil court recouverte de taches rondes (robe dite 'spotted').",
   " possède un corps compact et puissant et un dos arqué. Son ossature est forte, ainsi que sa musculature. Ce chat est également reconnaissable grâce à sa large tête en forme de trapèze, à ses pommettes saillantes et à ses grands yeux ronds. Ses oreilles de taille moyenne sont espacées l’une de l’autre.",
-  " est un chat de taille moyenne qui a une musculature délicate et une ossature fine. Sa tête est de forme triangulaire et il possède des yeux bleus brillants en amande placés légèrement à l’oblique, ainsi que des grandes et larges oreilles."
+  " est un chat de taille moyenne qui a une musculature délicate et une ossature fine. Sa tête est de forme triangulaire et il possède des yeux bleus brillants en amande placés légèrement à l’oblique, ainsi que des grandes et larges oreilles.",
   " a tout du félin et notamment une belle robe à poil court doux et brillant qui fait penser à celle d’un léopard, c’est-à-dire mouchetée de taches noires pleines, de type 'spotted tabby'.",
   " est un chat de très petite taille au corps musclé et aux pattes très courtes. Ses pattes de derrière ont aussi la particularité d’être un peu plus longues que celles de devant. En plus de ses pattes courtes et de sa petite taille, ce chat possède une robe reconnaissable et originale puisque ses poils sont courts et frisés sur tout son corps, jusqu’à sa queue. Ils forment des sortes d’ondulations à l’intensité variable sur son corps et donnent une impression de légèreté à sa robe.",
   " est dépourvu de poils, même si quelquefois il arbore un léger duvet satiné ayant l’aspect du cachemire. Sa peau forme comme des plis.",
@@ -80,5 +80,5 @@ descriptions = [
 ]
 
 20.times do |i|
-  Products.create!(title: titles[i], description: title[i]+descriptions[i], price: rand(0..99)+0.99, image_url: images[i])
+  Product.create!(title: titles[i], description: titles[i]+descriptions[i], price: rand(0..99)+0.99, image_url: images[i])
 end
