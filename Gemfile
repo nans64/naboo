@@ -66,7 +66,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'faker'
 gem 'table_print'
-gem 'webpacker', '~> 3.5'
 gem 'bcrypt'
 gem 'rubocop', '~> 0.57.2'
 gem 'pry'
